@@ -4,6 +4,8 @@ node_modules
 dist.zip
 dist.rar
 /build
+build.zip
+build.rar
 
 # local env files
 .env.local
