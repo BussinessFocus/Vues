@@ -3,7 +3,7 @@ let BaseUrl = ""; //后台访问基地址
 
 //开发环境配置
 if (process.env.NODE_ENV === "development") {
-    BaseUrl="";
+    BaseUrl="http://localhost:7001/";
 }
 //测试环境地址
 if (process.env.NODE_ENV === "test") {
