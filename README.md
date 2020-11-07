@@ -59,4 +59,5 @@ vue.config.js  vue配置文件
 ```
 
 ### 使用的主要技术框架介绍
-vue + iView + vuex
+必选：vue + iView + vue-router + axios  
+可选：vuex，dayjs，lodash，utility，qs
