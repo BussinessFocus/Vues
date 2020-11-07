@@ -1,7 +1,7 @@
 <!--
  * @Author: xuliqi
  * @Date: 2020-11-06 09:06:33
- * @Description: 渲染表情包的组件  用法：<RenderEmotion :content="content" />
+ * @Description: 渲染表情包的组件  用法：<RenderEmotion :content="content" />，需要和 Emotion组件配合使用,承载动态表情的背景需要是浅灰色或白色的
 -->
 <template>
     <div v-html="content.replace(/\[\^\^.*?\^\^\]/gi, emotion)"></div>
@@ -39,6 +39,5 @@ export default {
 </script>
 
 <style scoped lang="less">
-
 
 </style>

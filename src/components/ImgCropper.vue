@@ -1,3 +1,8 @@
+<!--
+ * @Author: 李祥雨
+ * @Date: 2020-11-07 10:50
+ * @Description: 图片裁剪组件，依赖于iview
+-->
 <template>
     <Modal v-model="show" :footer-hide="true" :mask-closable="false" :closable="false" title="裁剪图片" :width="cropZoneWidth">
     <div class="cropper-content">

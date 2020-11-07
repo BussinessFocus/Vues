@@ -1,3 +1,8 @@
+<!--
+ * @Author: 李祥雨
+ * @Date: 2020-11-07 10:50
+ * @Description: 富文本编辑器
+-->
 <template>
   <div class="rechtext-box">
     <quill-editor class="editor"

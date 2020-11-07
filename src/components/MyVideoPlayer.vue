@@ -1,3 +1,8 @@
+<!--
+ * @Author: 李祥雨
+ * @Date: 2020-11-07 10:50
+ * @Description: vue的视频播放器，传入视频链接即可
+-->
 <template>
   <div>
     <video-player  class="video-player-box"
@@ -25,7 +30,6 @@
 
 <script>
   import 'video.js/dist/video-js.css'
-
   import { videoPlayer } from 'vue-video-player'
 
 export default {

@@ -6,6 +6,7 @@
     vuex数据：<br/>
     {{article }}
     <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <Emotion></Emotion>
   </div>
 </template>
 
@@ -13,11 +14,12 @@
 import HelloWorld from '../components/HelloWorld.vue'
 import { Button } from 'view-design';
 import {mapState,mapActions} from 'vuex'
+import Emotion from '../components/Emotion.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld,Button
+    HelloWorld,Button,Emotion
   },
   computed: {
     ...mapState('article', ['article']),
