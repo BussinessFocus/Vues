@@ -4,7 +4,7 @@
     pageDemo1
     <Button type="primary">ceshianniu</Button><br/>
     vuex数据：<br/>
-    {{article}}
+    {{article }}
     <HelloWorld msg="Welcome to Your Vue.js App"/>
   </div>
 </template>
