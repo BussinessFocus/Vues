@@ -155,6 +155,30 @@ async function generatorLocalUploadImgBase64Url(img){
     return pro
 }
 
+/**
+ * 路径文件下载
+ * @param url 请求文件的地址
+ * @param fileName 文件名称
+ */
+function fileDownload(url,fileName){
+    var a = document.createElement('a');
+    a.download = fileName;
+    a.href = url;
+    a.click();
+}
+
+/**
+ * 流文件下载
+ * @param blobStream 后端返回的二进制文件流
+ * @param fileName 文件名称
+ */
+function streamFileDownload(blobStream,fileName) {
+    var a = document.createElement('a');
+    a.download = fileName;
+    a.href =  URL.createObjectURL(blobStream);
+    a.click();
+}
+
 export default{
     getUploadImgWidthAndHeight,
     dataURL2Blob,
@@ -162,6 +186,8 @@ export default{
     creatVideoThumbImg,
     creatImgThumbImg,
     generatorLocalUploadVideoFileUrl,
-    generatorLocalUploadImgBase64Url
+    generatorLocalUploadImgBase64Url,
+    fileDownload,
+    streamFileDownload
 }
 

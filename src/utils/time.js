@@ -24,3 +24,7 @@ function countDown(sec, callback1, callback2) {
     }
   }, 1000)
 }
+
+export default{
+  countDown
+}

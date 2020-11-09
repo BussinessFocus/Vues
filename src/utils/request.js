@@ -5,9 +5,9 @@
  */
 import axios from 'axios'
 import router from '../routers'
-import {BaseUrl} from '../config'
+import config from '../config'
 
-axios.defaults.baseURL = BaseUrl; // 设置全局默认基本信息
+axios.defaults.baseURL = config.BaseUrl; // 设置全局默认基本信息
 axios.defaults.headers['Content-Type'] = 'application/json'; // 设置默认的请求头的Content-Type
 
 /**
@@ -19,12 +19,20 @@ axios.defaults.headers['Content-Type'] = 'application/json'; // 设置默认的�
 const postRequest = (url, data) => axios.post(url, data)
 
 /**
- * @description 封装的get请求的方法npm
+ * @description 封装的get请求的方法
  * @param {*} url 请求的地址
  * @param {*} data  请求的数据
  * @returns 数据请求的promise对象
  */
 const getRequest = (url, data) => axios.get(url, { params: data })
+
+/**
+ * @description 封装的get请求二进制流文件的方法
+ * @param {*} url 请求的地址
+ * @param {*} data  请求的数据
+ * @returns 数据请求的promise对象
+ */
+const getBlobRequest = (url, data) => axios.get(url, { params: data,responseType: "blob" })
 
 // 请求拦截器
 axios.interceptors.request.use(config => {
@@ -52,5 +60,6 @@ axios.interceptors.response.use(response => {
 
 export default {
     postRequest,
-    getRequest
+    getRequest,
+    getBlobRequest
 }
