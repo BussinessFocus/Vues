@@ -6,7 +6,7 @@
 <template>
   <div class="ly-emotion" >
     <div class="emotion-box" :style="{height: height + 'px',width: width + 'px' }" @click.stop>
-        <img style="margin:1px 6px;" class="emotion-item" :src="`https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/${index}.gif`" @click.stop="clickHandler(item)" v-for="(item,index) in list" :key="index" />
+        <img style="padding:1px 6px;" class="emotion-item" :src="`https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/${index}.gif`" @click.stop="clickHandler(item)" v-for="(item,index) in list" :key="index" />
     </div>
   </div>
 </template>
@@ -61,5 +61,8 @@ export default {
   flex: 1;
   text-align: center;
   cursor: pointer;
+}
+.emotion-item:hover{
+  background:#E7E7E7;
 }
 </style>
