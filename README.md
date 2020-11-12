@@ -67,3 +67,9 @@ lodash
 utility  
 qs  
 vue-highlight.js（高亮显示代码的控件）  
+自定义组件：  
+ImgCropper（图片裁剪）  
+MyVideoPlayer（视频播放）  
+RichText（富文本）  
+Emotion（表情包输入）  
+RenderEmotion（表情包渲染）  
