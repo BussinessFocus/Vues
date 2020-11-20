@@ -127,6 +127,33 @@ async function creatImgThumbImg(img,scale){
 }
 
 /**
+ * 压缩图片，返回base64的图片地址，一般用于网络图片的压缩
+ * @param imgSrc 网络图片文件的链接地址
+ * @param scale 压缩的比率，在 0到1之间取值
+ * @returns {Promise<any>} resolve参数为base64编码的图片地址，reject 报错信息
+ */
+async function creatImgThumbImgBySrc(imgSrc,scale){
+    let pro = new Promise((resolve,reject)=>{
+        try{
+            const canvas = document.createElement('canvas');
+            const ctx = canvas.getContext('2d');
+            let newImg = new Image();
+            newImg.src = imgSrc;
+            newImg.onload = function(){
+                canvas.width  = this.naturalWidth*scale;
+                canvas.height = this.naturalHeight*scale;
+                ctx.drawImage(this, 0, 0, this.naturalWidth*scale, this.naturalHeight*scale);
+                let imgSrc = canvas.toDataURL('image/png');
+                resolve(imgSrc);
+            }
+        }catch(error){
+            reject(error)
+        }
+    })
+    return pro
+}
+
+/**
  * 将上传上来的视频文件生成url，赋给vedio元素后后可以播放
  * @param video 上传上来的video文件
  * @returns {string} 返回视频的链接地址
@@ -185,6 +212,7 @@ export default{
     imgBase64DataURL2File,
     creatVideoThumbImg,
     creatImgThumbImg,
+    creatImgThumbImgBySrc,
     generatorLocalUploadVideoFileUrl,
     generatorLocalUploadImgBase64Url,
     fileDownload,

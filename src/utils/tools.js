@@ -87,10 +87,29 @@ function generateInfiniteCategory(arr){
   return build_tree(0);
 }
 
+/**
+ * 正则截取字符串指定开头和结尾之间的内容，但不包含开头和结尾
+ * @param str 需要截取的字符串
+ * @param start 指定的开头
+ * @param end 指定的结尾
+ * @returns 如果查询到结果返回匹配结果的数组，否则返回空数组
+ */
+function regMatchCenterStr(str,start,end) {
+  var matchReg = `/(?<=${start}).*?(?=${end})/g`
+  var regstr = eval(matchReg);
+  let ret = str.match(regstr);
+  if(ret){
+    return  ret;
+  }else{
+    return [];
+  }
+}
+
 export default{
   swapArrItem,
   upGoArrItem,
   downGoArrItem,
   setArrItemToFirst,
-  generateInfiniteCategory
+  generateInfiniteCategory,
+  regMatchCenterStr
 }
