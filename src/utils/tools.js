@@ -105,11 +105,25 @@ function regMatchCenterStr(str,start,end) {
   }
 }
 
+/**
+ * @description: 验证手机号的方法
+ * @param {*}  手机号
+ * @return {*} 布尔类型：true || false
+ */
+function checkPhone(phone) {
+  if (!(/^1[34578]\d{9}$/.test(phone))) {
+    return false;
+  } else {
+    return true
+  }
+}
+
 export default{
   swapArrItem,
   upGoArrItem,
   downGoArrItem,
   setArrItemToFirst,
   generateInfiniteCategory,
-  regMatchCenterStr
+  regMatchCenterStr,
+  checkPhone
 }
