@@ -107,8 +107,8 @@ function regMatchCenterStr(str,start,end) {
 
 /**
  * @description: 验证手机号的方法
- * @param {*}  手机号
- * @return {*} 布尔类型：true || false
+ * @param {phone}  手机号
+ * @return {boolean} true或者false
  */
 function checkPhone(phone) {
   if (!(/^1[34578]\d{9}$/.test(phone))) {
