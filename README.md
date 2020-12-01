@@ -71,6 +71,7 @@ utility
 qs  
 vue-highlight.js（高亮显示代码的控件）  
 idCard (身份证信息读取与验证)  
+vue-hash-calendar  日历控件（移动端）
 
 自定义组件：  
 ImgCropper（图片裁剪）  
