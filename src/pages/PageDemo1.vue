@@ -6,7 +6,7 @@
     vuex数据：<br/>
     {{article }}
     <HelloWorld msg="Welcome to Your Vue.js App"/>
-    <Emotion></Emotion>
+    <Emotion @emotion="emHandle"></Emotion>
   </div>
 </template>
 
@@ -36,7 +36,10 @@ export default {
     ...mapState('article', ['article']),
   },
   methods:{
-    ...mapActions('article',['saveText'])
+    ...mapActions('article',['saveText']),
+    emHandle(em){
+      console.log(em)
+    }
   },
   created() {
     //下载流文件
